@@ -26,6 +26,7 @@ func createOrUpdateAuthor(db *gorm.DB, author *models.Author) (*models.Author, e
 }
 
 func main() {
+	// db := config.GetDB()
 	// newAuthor := &models.Author{
 	// 	Name:  "John Doe",
 	// 	Email: "john@example.com",
@@ -45,7 +46,7 @@ func main() {
 	// 	Body:   "this is a body",
 	// 	Author: author,
 	// }
-
+	// db.Create(&word)
 	router := chi.NewRouter()
 	router.Use(middleware.Logger)
 	routes.RegisterRoutes(router)

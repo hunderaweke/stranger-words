@@ -9,4 +9,5 @@ import (
 func RegisterRoutes(r *chi.Mux) {
 	r.Get("/api/words/", controllers.GetWords)
 	r.Get("/api/words/{id}", controllers.GetWord)
+	r.Post("/api/words/", controllers.CreateWord)
 }
